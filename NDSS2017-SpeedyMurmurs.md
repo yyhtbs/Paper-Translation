@@ -202,7 +202,7 @@ setCred：setCred对希望将其共享链路的值更改为c的一对节点$$(u�
 如果u或v中的一个更改其父节点，则所有后代都删除其坐标，并将删除通知其邻居。然后，他们都选择一个新的父节点和相应的坐标。与初始化setRoutes一致，节点首先仅考虑在两个方向上都具有非零链路的邻居。但是，如果节点没有到任何邻居的此类链路，则它会考虑一个方向的链路。如果他们有几个合适的父母，他们会从那些坐标最短的候选人中随机选择他们的父母，因为到地标的路径很短会减少路径的长度\[30\]。选择新坐标后，节点将新坐标和树索引转发给所有邻居。我们不提供伪代码，因为它与算法非常相似
 
 ```text
-**Algorithm 2 setCred**
+**算法 2 setCred**
 1: # Input: Graph G, u, v ∈ V , new value c
 2: old = w(u, v) # Previous value of w(u, v)
 3: # check if coordinate change necessary
